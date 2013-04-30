@@ -78,11 +78,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Entry.cpp" />
+    <ClCompile Include="Groups.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="QCParser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Entry.h" />
+    <ClInclude Include="Groups.h" />
     <ClInclude Include="QCParser.h" />
     <ClInclude Include="string.h" />
   </ItemGroup>

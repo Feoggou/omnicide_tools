@@ -25,6 +25,7 @@
 #include <boost/filesystem/operations.hpp>
 
 #include "QCParser.h"
+#include "Groups.h"
 
 //usage:
 //<source_file> <target_file>
@@ -67,6 +68,19 @@ void scan_directory_recursive(const std::string& src_name, /*out*/ std::vector<s
 
 int main(int argc, char** argv)
 {
+	std::string groups_filename = "D:/Projects/blood_omnicide/devkit/quakec/q3map2.ss";
+
+	std::ifstream src_file(groups_filename, std::ios_base::in, _SH_DENYWR);
+	std::string str((std::istreambuf_iterator<char>(src_file)), std::istreambuf_iterator<char>());
+
+	Groups g(str);
+	Index index;
+	std::vector<Group> groups;
+
+	g(index, groups);
+
+	return 0;
+
 	if (argc < 3)
 		showUsage();
 
