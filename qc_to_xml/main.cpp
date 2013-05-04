@@ -70,7 +70,7 @@ int main(int argc, char** argv)
 {
 	std::string groups_filename = "D:/Projects/blood_omnicide/devkit/quakec/q3map2.ss";
 
-	std::ifstream src_file(groups_filename, std::ios_base::in, _SH_DENYWR);
+    std::ifstream src_file(groups_filename, std::ios_base::in);
 	std::string str((std::istreambuf_iterator<char>(src_file)), std::istreambuf_iterator<char>());
 
 	Groups g(str);
@@ -114,7 +114,7 @@ int main(int argc, char** argv)
 		}
 
 	} else {
-		std::ifstream src_file(src_name, std::ios_base::in, _SH_DENYWR);
+        std::ifstream src_file(src_name, std::ios_base::in);
 		std::string str((std::istreambuf_iterator<char>(src_file)), std::istreambuf_iterator<char>());
 
 		QCParser parser(str);
